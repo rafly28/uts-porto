@@ -18,16 +18,52 @@
     <body class="antialiased">
     <div class="container mx-auto px-4">
         <!-- Hero Section -->
-        <div class="mt-5">
-        </div>
         <div class="flex flex-col items-center justify-center h-screen text-center">
-            <img src="{{ asset('images/test.jpeg') }}" alt="Foto Profil" class="w-48 h-48 rounded-full mb-5 object-cover">
             <h1 class="text-4xl font-bold text-gray-800">Muhamad Rafly Firdaus Oktabian</h1>
-            <h2 class="text-2xl text-gray-600">System Administrator</h2>
-            <p class="mt-4 text-gray-500 max-w-md">
-                Deskripsi singkat tentang diri Anda. Anda bisa menjelaskan keahlian, pengalaman, atau minat Anda di sini.
-            </p>
+            <h2 class="text-2xl text-gray-600" id="role"></h2>
         </div>
+        <!-- End Hero Section -->
+
+        <!-- About Section -->
+        <div class="container">
+            <h2 class="text-3xl font-bold text-center mb-8">Tentang Saya</h2>
+            <div class="flex flex-col items-center justify-center">  
+                <img src="{{ asset('images/test.jpeg') }}" alt="Foto Profil" class="object-cover h-52 w-52 pb-5 mb-5">
+                <div>
+                    <p class="text-lg text-gray-700">
+                        Saya adalah seorang pengembang web dengan pengalaman lebih dari 3 tahun di industri ini.
+                    </p>
+                    <h3 class="text-xl font-semibold mt-4">Keahlian:</h3>
+                    <ul class="list-disc list-inside">
+                        <li>Pengembangan Aplikasi Web</li>
+                        <li>Desain UI/UX</li>
+                        <li>Pengoptimalan Performa</li>
+                    </ul>
+                    <p class="mt-4">Visi saya adalah untuk menciptakan solusi digital yang memudahkan kehidupan sehari-hari.</p>
+                </div>
+            </div>
+        </div>
+         <!-- End About Section -->
+
+         {{-- Education Section --}}
+         {{-- End Education Section --}}
+
+         {{-- Project Section --}}
+         {{-- End Project Section --}}
     </div>
+
+    {{-- Script Role --}}
+    <script>
+        const roles = ["System Administrator", "Cloud Engineer", "DevOps"];
+        let index = 0;
+        
+        function changeRole() {
+            const roleElement = document.getElementById('role');
+            roleElement.textContent = roles[index];
+            index = (index + 1) % roles.length;
+        }
+        setInterval(changeRole, 2000);
+        changeRole();
+    </script>
     </body>
 </html>
