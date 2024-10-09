@@ -18,10 +18,10 @@
     <body class="antialiased">
     <div class="container mx-auto px-4">
         <!-- Hero Section -->
-        <div class="md:w-1/2">
-            <img src="{{ asset('images/test.jpeg') }}" alt="Foto Profil" class="w-48 h-48 rounded-full mx-auto md:mx-0">
+        <div class="mt-5">
         </div>
         <div class="flex flex-col items-center justify-center h-screen text-center">
+            <img src="{{ asset('images/test.jpeg') }}" alt="Foto Profil" class="w-48 h-48 rounded-full mb-5 object-cover">
             <h1 class="text-4xl font-bold text-gray-800">Muhamad Rafly Firdaus Oktabian</h1>
             <h2 class="text-2xl text-gray-600">System Administrator</h2>
             <p class="mt-4 text-gray-500 max-w-md">
